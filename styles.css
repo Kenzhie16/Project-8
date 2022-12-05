@@ -404,12 +404,14 @@ footer .info ul li:hover a i {
     }
     .about{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     .about .contentBox{
         width: 100%;
     }
     .contact{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     .contact img{
         height: 100%;
@@ -422,6 +424,12 @@ footer .info ul li:hover a i {
     }
     .contact .form h1{
         text-align: center;
+        
+    }
+    .tournaments {
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
     }
     footer .info{
         flex-direction: column;

@@ -115,7 +115,7 @@ header .action .searchBox input {
 .contact {
     padding: 20px 100px;
     width: 100%;
-    min-height: 50vh;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +151,6 @@ header .action .searchBox input {
 .contact .form h1 {
     color: white;
     font-size: 50px;
-    margin-left: -90px;
     text-shadow: 0 0 10px red;
 }
 

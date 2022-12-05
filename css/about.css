@@ -254,14 +254,14 @@ header .action .searchBox input {
 }
 
 .banner img {
-    height: 90vh;
+    height: 100vh;
     width:fit-content;
 }
 
 .about {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     padding: 0px 100px;
     display: flex;
     justify-content: center;
@@ -418,8 +418,10 @@ footer .info ul li:hover a i {
         z-index: 1000;
         border-radius: 10px;
     }
+
     .about{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     .about .contentBox{
         width: 100%;
@@ -435,13 +437,13 @@ footer .info ul li:hover a i {
         width: 100%;
         margin: 30px;
         padding: 10px;
+        flex-wrap: nowrap;
     }
     .contact .form h1{
         text-align: center;
+        
     }
     footer .info{
         flex-direction: column;
     }
  }
-
- 
