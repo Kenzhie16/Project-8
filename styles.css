@@ -342,11 +342,11 @@ footer .info ul li:hover a i {
  }
 
  /* Responsiveness */
- @media screen and (max-width: 1200px) and (min-width: 800px) {
+ @media screen and (max-width: 900px) {
     header {
         flex-wrap: wrap;
-        width: 95%;
-        padding: 15px 40px;
+        width: 100%;
+
     }
     header .nav {
         flex-wrap: wrap;
@@ -410,6 +410,8 @@ footer .info ul li:hover a i {
         width: 100%;
     }
     .contact{
+        width: 100%;
+        height: 100%;
         flex-direction: column;
         flex-wrap: wrap;
     }
@@ -430,6 +432,11 @@ footer .info ul li:hover a i {
         flex-wrap: wrap;
         width: 100%;
         height: 100%;
+    }
+    .games {
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
     }
     footer .info{
         flex-direction: column;
