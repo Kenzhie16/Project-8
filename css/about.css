@@ -6,12 +6,14 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
+    overflow: hidden;
 }
 
 body {
     background-image: url(https://i.pinimg.com/736x/4b/fc/d5/4bfcd5062f27682f689382d6a43a7844.jpg);
     height: 100vh;
     position: relative;
+    
 }
 
 /* Scrollbar */
@@ -24,7 +26,9 @@ body {
     border-radius: 6px;
 }
 
-
+.regactive{
+    display: none !important;
+}
 header {
     position: fixed;
     top: 0;
@@ -57,6 +61,7 @@ header .nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 header .active {
     color: white;
@@ -73,7 +78,7 @@ header ul li {
 header ul li a {
     color: white;
     text-decoration: none;
-    padding: 0px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bolder;
 }
@@ -106,26 +111,6 @@ header .action .searchBox input {
     color: black;
 }
 
-header .register {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border: 1px solid #1aeeef;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 1px;
-}
-
-header .register:hover {
-    background: brown;
-    border: 1px solid white;
-    color: white;
-    transform: scale(.95);
-    transition: .2s ease;
-}
-
 /* Home Banner */
 .banner {
     position: relative;
@@ -135,7 +120,6 @@ header .register:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .banner .bg {
@@ -154,11 +138,10 @@ header .register:hover {
 
 .banner .bg .content h2 {
     font-size: 4rem;
-    color: white;
+    color: red;
     letter-spacing: 1px;
     font-weight: bolder;
     font-style: italic;
-    text-shadow: 0 0 10px red;
 }
 
 .banner .bg .content p {
@@ -188,11 +171,6 @@ header .register:hover {
 .banner .bg img {
     width: 600px;
 }
-
-.regactive{
-    display: none !important;
-}
-
 /* Registration */
 .registration {
     padding: 20px 100px;
@@ -202,7 +180,6 @@ header .register:hover {
     justify-content: center;
     align-items: center;
 }
-
 
 .registration img {
     height: 100%;
@@ -270,10 +247,50 @@ header .register:hover {
     color: white;
 }
 
+/* About Us */
+.banner .bg .content {
+    justify-content: center;
+    margin-top: -200px;
+}
+
+.banner img {
+    height: 90vh;
+    width:fit-content;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .contentBox {
+    width: 50%;  
+}
+.banner .bg .content h2 {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 0 0 10px red;
+}
+
+.about .contentBox p {
+    max-width: 600px;
+    text-align: justify;
+    color: white;
+
+}
+
 /* Footer */
 footer {
     padding: 0 100px;
-    margin-top: -10vh;
+    margin-top: -100px;
 
 }
 
@@ -289,7 +306,6 @@ footer .info .logo {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 0 10px red;
 }
 
 footer .info p{

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="./css/about.css"> -->
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -19,8 +21,8 @@
     <header>
         <a href="#" class="logo">Game<span> Hub</span></a>
         <ul class="nav">
-            <li> <a href="./index.html" class="active">Home</a> </li>
-            <li> <a href="about.html">About Us</a> </li>
+            <li> <a href="./index.html">Home</a> </li>
+            <li> <a href="./about.html"  class="active">About Us</a> </li>
             <li> <a href="./games.html">Games</a> </li>
             <li> <a href="./Tournament.html">Tournaments</a> </li>
             <li> <a href="./contact.html">Contact Us</a> </li>
@@ -37,29 +39,22 @@
     </header>
 
 
-    <!-- Home Banner -->
-
+    !-- About Us-->
     <div class="banner animeX" id="home">
         <div class="bg">
             <div class="content">
-                <h2>Game Hub : <br>
-                    <span>"The Hub For Gamers"</span>
-                </h2>
+                <h2>About Us</h2>
                 <br>
-                <p>Game Hub is a video game digital distribution service and storefront by KodeGo. It was launched as a
-                    software client in November 2022 as a way for KodeGo to provide automatic updates for their games,
-                    and expanded to distributing and offering third-party game publishers' titles in late 2021.
-                    <br><br>Game Hub offers various features, like digital rights management (DRM), game server
-                    matchmaking, anti-cheat measures, social networking and game streaming services. It provides the
-                    user with automatic game updating, saved game cloud synchronization, and community features such as
-                    friends messaging, in-game chat and a community market.
-                </p>
-                <a href="./register.html" class="regactive" id="register">Register Now</a>
+                <p>
+                    Our Game Hub launched early 2022 which aims to bring together an international network of gamers in the field of gaming & Esports. We provide and develop an easy interface that would let the users to the pool of gaming. 
+                    <br><br>
+                    Whether you’re into playing PC games, video games or online games, Game Hub has you covered. More specifically, this community shares insights on game engines, virtual studios, Esports competitions, user-engagement & gamification.  <br><br>A registered user can directly enter to the website by login using username and password. 
+                </p>         
             </div>
-
-            <img src="https://i.pinimg.com/originals/7b/c1/4f/7bc14fbd833a5d34a464ba2bc5827a3f.png" alt="">
+            <img src="./images/about-image.png" alt="">
         </div>
-    </div> 
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="info">
@@ -73,9 +68,7 @@
             </ul>
         </div>
     </footer>
-    
     <script>
-
         // Sticky NavBar
         window.addEventListener('load', function () {
             var header = document.querySelector('header');
@@ -131,31 +124,27 @@
                 }
             })
         }
-        const register = document.querySelector('#register');
+
         const loginBtn = document.querySelector('#loginBtn');
         let storage = localStorage.getItem('regActive');
         
         if(!storage){
-            register.classList.remove('regactive');
             document.querySelector('.register').classList.add('regactive');
             document.querySelector('#loginBtn').classList.remove('regactive');
         }else{
-            register.classList.add('regactive');
             loginBtn.classList.add('regactive');
         }
 
         function logout(){
+            window.location = './index.html'
             localStorage.clear();
-            location.reload();
         }
    
-       
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
 </body>
 
 </html>

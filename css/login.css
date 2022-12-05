@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
+    overflow: hidden;
 }
 
 body {
@@ -24,13 +25,15 @@ body {
     border-radius: 6px;
 }
 
-
+.regactive{
+    display: none !important;
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 7px 80px;
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +76,7 @@ header ul li {
 header ul li a {
     color: white;
     text-decoration: none;
-    padding: 0px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bolder;
 }
@@ -135,7 +138,6 @@ header .register:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .banner .bg {
@@ -154,11 +156,10 @@ header .register:hover {
 
 .banner .bg .content h2 {
     font-size: 4rem;
-    color: white;
+    color: red;
     letter-spacing: 1px;
     font-weight: bolder;
     font-style: italic;
-    text-shadow: 0 0 10px red;
 }
 
 .banner .bg .content p {
@@ -189,12 +190,12 @@ header .register:hover {
     width: 600px;
 }
 
-.regactive{
+.logactive{
     display: none !important;
 }
 
-/* Registration */
-.registration {
+/* Login */
+.login {
     padding: 20px 100px;
     width: 100%;
     height: 100%;
@@ -204,37 +205,36 @@ header .register:hover {
 }
 
 
-.registration img {
+.login img {
     height: 100%;
     width: 50%;
     object-fit: contain;
     border-radius: 10px;    
 }
 
-.registration .form {
+.login .form {
     width: 50%;
     margin: 30px;
 
 }
 
-.registration .form h1 {
+.login .form h1 {
     color: white;
     font-weight: bolder;
     font-size: 3em;
-    text-shadow: 0 0 10px red;
 }
 
-.registration .form .inputBox {
+.login .form .inputBox {
     margin: 10px 0;
 }
 
-.registration .form .inputBox p {
+.login .form .inputBox p {
     color: red;
     font-weight: 700;
 }
 
-.registration .form .inputBox input,
-.registration .form .inputBox textarea {
+.login .form .inputBox input,
+.login .form .inputBox textarea {
     border: none;
     outline: none;
     padding: 10px;
@@ -245,11 +245,11 @@ header .register:hover {
     font-size: 1.1rem;
 }
 
-.registration .form .inputBox textarea {
+.login .form .inputBox textarea {
     height: 150px;
 }
 
-.registration .form .inputBox input[type="submit"] {
+.login .form .inputBox input[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
     margin: 15px 0;
@@ -264,7 +264,7 @@ header .register:hover {
     letter-spacing: 1px;
 }
 
-.registration .form .inputBox input[type="submit"]:hover {
+.login .form .inputBox input[type="submit"]:hover {
     background: brown;
     border: none;
     color: white;
@@ -273,7 +273,7 @@ header .register:hover {
 /* Footer */
 footer {
     padding: 0 100px;
-    margin-top: -10vh;
+    margin-top: -100px;
 
 }
 
@@ -289,7 +289,6 @@ footer .info .logo {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 0 10px red;
 }
 
 footer .info p{

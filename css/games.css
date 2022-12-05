@@ -11,7 +11,9 @@
 body {
     background-image: url(https://i.pinimg.com/736x/4b/fc/d5/4bfcd5062f27682f689382d6a43a7844.jpg);
     height: 100vh;
-    position: relative;
+    
+    
+    
 }
 
 /* Scrollbar */
@@ -24,7 +26,9 @@ body {
     border-radius: 6px;
 }
 
-
+.regactive{
+    display: none !important;
+}
 header {
     position: fixed;
     top: 0;
@@ -36,8 +40,9 @@ header {
     align-items: center;
     transition: 0.5s;
     z-index: 1000;
-    
+
 }
+
 header.sticky {
     background: black;
 
@@ -58,6 +63,7 @@ header .nav {
     justify-content: center;
     align-items: center;
 }
+
 header .active {
     color: white;
     background-color: red;
@@ -65,21 +71,21 @@ header .active {
 
 header ul li {
     list-style: none;
-    margin: 10px; 
+    margin: 10px;
     border-radius: 10px;
-    
+
 }
 
 header ul li a {
     color: white;
     text-decoration: none;
-    padding: 0px 10px;
-    border-radius: 5px;
+    padding: 0px 20px;
+    border-radius: 10px;
     font-weight: bolder;
 }
 
 header ul li a:hover {
-    background:brown;
+    background: brown;
     color: white;
 }
 
@@ -106,174 +112,155 @@ header .action .searchBox input {
     color: black;
 }
 
-header .register {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border: 1px solid #1aeeef;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 1px;
-}
 
-header .register:hover {
-    background: brown;
-    border: 1px solid white;
-    color: white;
-    transform: scale(.95);
-    transition: .2s ease;
-}
-
-/* Home Banner */
-.banner {
-    position: relative;
+/* Games */
+.games {
+    padding: 0px 100px;
     width: 100%;
     min-height: 100vh;
-    padding: 0px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 100px auto 200px auto;
+}
+
+.games h2 {
+    color: white;
+    margin: 10px 0;
+    text-shadow: 0 0 10px red;
+}
+
+.games ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.games ul li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+}
+
+.games ul li.active {
+    background: red;
+    color: white;
+}
+
+.games .cardBox {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.games .cardBox .card {
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: black;
     overflow: hidden;
 }
 
-.banner .bg {
-    position: relative;
+.games .cardBox .card img {
     width: 100%;
-    min-height: 100vh;
+    height: 250px;
+    object-fit: cover;
+}
+
+.games .cardBox .card .content {
+    padding: 10px;
+}
+
+.games .cardBox .card .content h4 {
+    color: white;
+    margin: 15px 0;
+}
+
+.games .cardBox .card .progress-line {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: black;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.games .cardBox .card .progress-line span {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #1aeeef;
+    box-shadow: 0 0 10px #1aeeef;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+.games .cardBox .card .info {
+    border-top: 2px solid black;
+    padding: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.banner .bg .content {
-    width: 50%;
-    height: 100%;
-}
-
-.banner .bg .content h2 {
-    font-size: 4rem;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: bolder;
-    font-style: italic;
-    text-shadow: 0 0 10px red;
-}
-
-.banner .bg .content p {
+.games .cardBox .card .info p {
     font-size: 1rem;
     color: white;
-    letter-spacing: 1px;
 }
 
-.banner .bg .content a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border: 1px solid #1aeeef;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.banner .bg .content a:hover {
-    background: brown;
-    border: none;
-    color: white;
-}
-
-.banner .bg img {
-    width: 600px;
-}
-
-.regactive{
-    display: none !important;
-}
-
-/* Registration */
-.registration {
-    padding: 20px 100px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.registration img {
-    height: 100%;
-    width: 50%;
-    object-fit: contain;
-    border-radius: 10px;    
-}
-
-.registration .form {
-    width: 50%;
-    margin: 30px;
-
-}
-
-.registration .form h1 {
-    color: white;
-    font-weight: bolder;
-    font-size: 3em;
-    text-shadow: 0 0 10px red;
-}
-
-.registration .form .inputBox {
-    margin: 10px 0;
-}
-
-.registration .form .inputBox p {
+.games .cardBox .card .info p span {
     color: red;
-    font-weight: 700;
 }
 
-.registration .form .inputBox input,
-.registration .form .inputBox textarea {
-    border: none;
-    outline: none;
-    padding: 10px;
-    width: 60%;
-    color: black;
-    background: white;
-    min-height: 15px;
-    font-size: 1.1rem;
-}
-
-.registration .form .inputBox textarea {
-    height: 150px;
-}
-
-.registration .form .inputBox input[type="submit"] {
+.games .cardBox .card .info a {
     display: inline-block;
     padding: 10px 20px;
-    margin: 15px 0;
-    outline: none;
-    background: transparent;
+    margin: 10px 0;
     border: 1px solid #1aeeef;
     text-decoration: none;
     font-weight: 700;
-    width: 150px;
     border-radius: 5px;
     color: white;
     letter-spacing: 1px;
 }
 
-.registration .form .inputBox input[type="submit"]:hover {
+.games .cardBox .card .info a:hover {
     background: brown;
     border: none;
-    color: white;
+    color: white
 }
+
+.games .cardBox .card.hide {
+    display: none;
+}
+
+
 
 /* Footer */
 footer {
     padding: 0 100px;
-    margin-top: -10vh;
+    margin-top: -100px;
 
 }
 
@@ -289,10 +276,9 @@ footer .info .logo {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 0 10px red;
 }
 
-footer .info p{
+footer .info p {
     color: white;
 }
 
@@ -329,25 +315,28 @@ footer .info ul li a i {
 
 footer .info ul li:hover a i {
     color: black;
- }
- .animeX{
+}
+
+.animeX {
     position: relative;
     transform: translateY(100px);
     opacity: 0;
     transition: all 2s ease;
- }
- .animeX.active{
+}
+
+.animeX.active {
     transform: translateY(0px);
     opacity: 1;
- }
+}
 
- /* Responsiveness */
- @media screen and (max-width: 900px) {
+/* Responsiveness */
+@media screen and (max-width: 900px) {
     header {
         flex-wrap: wrap;
         width: 95%;
         padding: 15px 40px;
     }
+
     header .nav {
         flex-wrap: wrap;
         position: fixed;
@@ -361,16 +350,20 @@ footer .info ul li:hover a i {
         flex-direction: column;
         z-index: 1000;
     }
+
     header .nav.active {
         display: flex;
     }
+
     header .nav li {
         margin: 20px 0;
     }
+
     header .nav li a {
         font-size: 24px;
         margin: 10px 0;
     }
+
     .toggleMenu {
         position: relative;
         width: 30px;
@@ -381,6 +374,7 @@ footer .info ul li:hover a i {
         background-repeat: no-repeat;
         z-index: 1001;
     }
+
     .toggleMenu.active {
         background: url(https://freevector.co/wp-content/uploads/2012/12/80011-cancel-sign.png);
         background-position: center;
@@ -389,10 +383,12 @@ footer .info ul li:hover a i {
         background: red;
         border-radius: 50px;
     }
+
     .banner .bg img {
         position: absolute;
         width: 100%;
     }
+
     .banner .bg .content {
         flex-wrap: wrap;
         width: 100%;
@@ -402,30 +398,35 @@ footer .info ul li:hover a i {
         z-index: 1000;
         border-radius: 10px;
     }
-    .about{
+
+    .about {
         flex-direction: column;
     }
-    .about .contentBox{
+
+    .about .contentBox {
         width: 100%;
     }
-    .contact{
+
+    .contact {
         flex-direction: column;
     }
-    .contact img{
+
+    .contact img {
         height: 100%;
         width: 100%;
     }
-    .contact .form{
+
+    .contact .form {
         width: 100%;
         margin: 30px;
         padding: 10px;
     }
-    .contact .form h1{
+
+    .contact .form h1 {
         text-align: center;
     }
-    footer .info{
+
+    footer .info {
         flex-direction: column;
     }
- }
-
- 
+}

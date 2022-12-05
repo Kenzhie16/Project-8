@@ -6,12 +6,15 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
+    overflow: hidden;
 }
 
 body {
     background-image: url(https://i.pinimg.com/736x/4b/fc/d5/4bfcd5062f27682f689382d6a43a7844.jpg);
     height: 100vh;
-    position: relative;
+    
+    
+    
 }
 
 /* Scrollbar */
@@ -24,7 +27,9 @@ body {
     border-radius: 6px;
 }
 
-
+.regactive{
+    display: none !important;
+}
 header {
     position: fixed;
     top: 0;
@@ -73,7 +78,7 @@ header ul li {
 header ul li a {
     color: white;
     text-decoration: none;
-    padding: 0px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bolder;
 }
@@ -106,150 +111,76 @@ header .action .searchBox input {
     color: black;
 }
 
-header .register {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border: 1px solid #1aeeef;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 1px;
-}
-
-header .register:hover {
-    background: brown;
-    border: 1px solid white;
-    color: white;
-    transform: scale(.95);
-    transition: .2s ease;
-}
-
-/* Home Banner */
-.banner {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.banner .bg {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner .bg .content {
-    width: 50%;
-    height: 100%;
-}
-
-.banner .bg .content h2 {
-    font-size: 4rem;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: bolder;
-    font-style: italic;
-    text-shadow: 0 0 10px red;
-}
-
-.banner .bg .content p {
-    font-size: 1rem;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.banner .bg .content a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    border: 1px solid #1aeeef;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.banner .bg .content a:hover {
-    background: brown;
-    border: none;
-    color: white;
-}
-
-.banner .bg img {
-    width: 600px;
-}
-
-.regactive{
-    display: none !important;
-}
-
-/* Registration */
-.registration {
+/* Contact Us */
+.contact {
     padding: 20px 100px;
     width: 100%;
-    height: 100%;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.contact.contactPage {
+    margin-top: 15vh;
+    padding: 50px;
+}
+
+.contact.contactPage img {
+    width: 100%
+}
+
+.contact.contactPage .form {
+    width: 100%;
+    color: red;
+    font-weight: bolder;
+}
 
 
-.registration img {
+.contact img {
     height: 100%;
     width: 50%;
-    object-fit: contain;
-    border-radius: 10px;    
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.registration .form {
+.contact .form {
     width: 50%;
     margin: 30px;
-
 }
 
-.registration .form h1 {
+.contact .form h1 {
     color: white;
-    font-weight: bolder;
-    font-size: 3em;
+    font-size: 50px;
+    margin-left: -90px;
     text-shadow: 0 0 10px red;
 }
 
-.registration .form .inputBox {
+.contact .form .inputBox {
     margin: 10px 0;
 }
 
-.registration .form .inputBox p {
+.contact .form .inputBox p {
     color: red;
     font-weight: 700;
 }
 
-.registration .form .inputBox input,
-.registration .form .inputBox textarea {
+.contact .form .inputBox input,
+.contact .form .inputBox textarea {
     border: none;
     outline: none;
     padding: 10px;
-    width: 60%;
+    width: 100%;
     color: black;
     background: white;
     min-height: 15px;
     font-size: 1.1rem;
 }
 
-.registration .form .inputBox textarea {
+.contact .form .inputBox textarea {
     height: 150px;
 }
 
-.registration .form .inputBox input[type="submit"] {
+.contact .form .inputBox input[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
     margin: 15px 0;
@@ -264,16 +195,16 @@ header .register:hover {
     letter-spacing: 1px;
 }
 
-.registration .form .inputBox input[type="submit"]:hover {
-    background: brown;
+.contact .form .inputBox input[type="submit"]:hover {
+    background: #f52323f1;
     border: none;
-    color: white;
+    color: black;
+    box-shadow: 0 0 10px #1aeeef;
 }
 
 /* Footer */
 footer {
     padding: 0 100px;
-    margin-top: -10vh;
 
 }
 
@@ -281,6 +212,7 @@ footer .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 160px;
 }
 
 footer .info .logo {
@@ -289,7 +221,6 @@ footer .info .logo {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 0 10px red;
 }
 
 footer .info p{
