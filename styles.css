@@ -342,7 +342,7 @@ footer .info ul li:hover a i {
  }
 
  /* Responsiveness */
- @media screen and (max-width: 900px) {
+ @media screen and (max-width: 1200px) and (min-width: 800px) {
     header {
         flex-wrap: wrap;
         width: 95%;
@@ -435,5 +435,3 @@ footer .info ul li:hover a i {
         flex-direction: column;
     }
  }
-
- 
